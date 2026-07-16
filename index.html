@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusBite UPM - Pre-order Campus Meals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🍔</span>
+                <span class="logo-text">Campus<span class="highlight">Bite</span> UPM</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#surplus">Surplus Deals</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-login" onclick="showLogin()">Login</button>
+                <button class="btn-primary" onclick="showRegister()">Sign Up</button>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Pre-order. Pick Up.<br>
+                    <span class="highlight">Save Time.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Skip the queue at UPM cafeterias. Order ahead, pick up at your time slot, and enjoy exclusive surplus food deals — all in one simple platform.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large" onclick="scrollToSection('menu')">
+                        🍽️ Browse Menu
+                    </button>
+                    <button class="btn-secondary btn-large" onclick="scrollToSection('how-it-works')">
+                        ▶️ How It Works
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Partner Vendors</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Orders Daily</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15 min</span>
+                        <span class="stat-label">Avg. Time Saved</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="phone-header">CampusBite</div>
+                    <div class="phone-screen">
+                        <div class="mock-food-item">
+                            <div class="mock-img">🍛</div>
+                            <div class="mock-info">
+                                <div class="mock-name">Chicken Rice</div>
+                                <div class="mock-price">RM5.50</div>
+                            </div>
+                            <div class="mock-badge">🔥 Hot</div>
+                        </div>
+                        <div class="mock-food-item">
+                            <div class="mock-img">🥘</div>
+                            <div class="mock-info">
+                                <div class="mock-name">Nasi Lemak</div>
+                                <div class="mock-price">RM4.00</div>
+                            </div>
+                            <div class="mock-badge">⏰ Pre-order</div>
+                        </div>
+                        <div class="mock-food-item">
+                            <div class="mock-img">🍜</div>
+                            <div class="mock-info">
+                                <div class="mock-name">Curry Mee</div>
+                                <div class="mock-price">RM4.50</div>
+                            </div>
+                            <div class="mock-badge">✅ Available</div>
+                        </div>
+                        <div class="mock-pickup">
+                            📍 Pickup: 12:00 - 12:30 PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,40 C360,100 720,0 1080,60 C1260,90 1380,50 1440,40 L1440,100 L0,100 Z" fill="#f8f9fa"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose CampusBite?</h2>
+            <p class="section-subtitle">We solve the three biggest problems on campus: time, price, and food waste.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Skip the Queue</h3>
+                    <p>Pre-order your meal and pick it up at your chosen time slot. No more waiting in long lines during peak hours.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Save Money</h3>
+                    <p>Low service fee of just RM0.50-RM1. Plus, grab surplus food at discounted prices and help reduce waste.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Easy to Use</h3>
+                    <p>Mobile-friendly web app — no download needed. Browse menus, order, and get pickup reminders instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Our surplus food program helps vendors clear unsold meals and reduces campus food waste sustainably.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🕌</div>
+                    <h3>Halal & Nutrition Info</h3>
+                    <p>Every menu item shows halal certification and nutrition details, so you can make informed choices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏃</div>
+                    <h3>Student Runner Delivery</h3>
+                    <p>Optional short-distance delivery by fellow students who know the campus inside out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Today's Menu</h2>
+            <p class="section-subtitle">Fresh from UPM cafeterias — pre-order now for your preferred pickup time</p>
+
+            <!-- Vendor Filter -->
+            <div class="vendor-tabs">
+                <button class="vendor-tab active" onclick="filterMenu('all', this)">🍽️ All Items</button>
+                <button class="vendor-tab" onclick="filterMenu('cafeteria-a', this)">🏪 Cafeteria A</button>
+                <button class="vendor-tab" onclick="filterMenu('cafeteria-b', this)">🏪 Cafeteria B</button>
+                <button class="vendor-tab" onclick="filterMenu('snack', this)">☕ Snack & Drinks</button>
+            </div>
+
+            <!-- Time Slot Selector -->
+            <div class="time-slot-selector">
+                <h4>📅 Select Pickup Time:</h4>
+                <div class="time-slots">
+                    <button class="time-slot active" onclick="selectTimeSlot(this)">11:00-11:30</button>
+                    <button class="time-slot" onclick="selectTimeSlot(this)">11:30-12:00</button>
+                    <button class="time-slot" onclick="selectTimeSlot(this)">12:00-12:30</button>
+                    <button class="time-slot" onclick="selectTimeSlot(this)">12:30-13:00</button>
+                    <button class="time-slot" onclick="selectTimeSlot(this)">17:00-17:30</button>
+                    <button class="time-slot" onclick="selectTimeSlot(this)">17:30-18:00</button>
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Items will be rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Surplus Deals Section -->
+    <section id="surplus" class="surplus-section">
+        <div class="container">
+            <div class="surplus-header">
+                <h2 class="section-title">🔥 Surplus Food Deals</h2>
+                <div class="surplus-badge">Limited Time Only</div>
+            </div>
+            <p class="section-subtitle">Help reduce food waste and grab great meals at discounted prices!</p>
+            <div class="surplus-grid" id="surplusGrid">
+                <!-- Surplus items rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Getting your campus meal has never been easier</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📱</div>
+                    <h3>Browse & Order</h3>
+                    <p>Open CampusBite on your phone, browse today's menu from campus vendors, and place your pre-order.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">⏰</div>
+                    <h3>Choose Pickup Time</h3>
+                    <p>Select a convenient 30-minute pickup time slot that fits your class schedule.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">📍</div>
+                    <h3>Pick Up & Enjoy</h3>
+                    <p>Show your QR code at the counter, skip the queue, and enjoy your meal. Or get it delivered by a student runner!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vendor Dashboard Preview -->
+    <section id="about" class="vendor-section">
+        <div class="container">
+            <div class="vendor-content">
+                <div class="vendor-text">
+                    <h2 class="section-title">For Vendors</h2>
+                    <p class="section-subtitle">Grow your campus business with CampusBite</p>
+                    <ul class="vendor-benefits">
+                        <li>✅ Only 3-5% commission — far lower than big delivery platforms</li>
+                        <li>✅ Predict demand and reduce food waste</li>
+                        <li>✅ Simple dashboard (or WhatsApp integration)</li>
+                        <li>✅ Reach more students across faculties</li>
+                        <li>✅ Featured promotion packages available</li>
+                    </ul>
+                    <button class="btn-primary" onclick="alert('Vendor signup coming soon!')">Become a Partner</button>
+                </div>
+                <div class="vendor-preview">
+                    <div class="dashboard-mockup">
+                        <div class="dash-header">
+                            <span>📊 Vendor Dashboard</span>
+                        </div>
+                        <div class="dash-body">
+                            <div class="dash-row">
+                                <span>🍛 Chicken Rice x3</span>
+                                <span class="dash-time">12:00 pickup</span>
+                            </div>
+                            <div class="dash-row">
+                                <span>🥘 Nasi Lemak x5</span>
+                                <span class="dash-time">12:30 pickup</span>
+                            </div>
+                            <div class="dash-row">
+                                <span>🍜 Curry Mee x2</span>
+                                <span class="dash-time">13:00 pickup</span>
+                            </div>
+                            <div class="dash-summary">
+                                <div>Today's Orders: <strong>23</strong></div>
+                                <div>Revenue: <strong>RM128.50</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🍔</span>
+                        <span class="logo-text">Campus<span class="highlight">Bite</span> UPM</span>
+                    </div>
+                    <p>Pre-order campus meals. Save time. Reduce waste.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#surplus">Surplus Deals</a>
+                    <a href="#how-it-works">How It Works</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Vendor Sign Up</a>
+                    <a href="#">Runner Apply</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Follow Us</h4>
+                    <a href="#">📱 WhatsApp</a>
+                    <a href="#">📸 Instagram</a>
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📧 Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CampusBite UPM. Group 6, MGM3180. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>👤 Login to CampusBite</h2>
+                <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Student ID / Email</label>
+                    <input type="text" placeholder="e.g. BC260049" />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" />
+                </div>
+                <button class="btn-primary btn-full" onclick="handleLogin()">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#" onclick="closeModal('loginModal'); showRegister();">Sign up here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal-overlay" id="registerModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>📝 Create Account</h2>
+                <button class="modal-close" onclick="closeModal('registerModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" placeholder="e.g. Wen Shun" />
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="e.g. Chang" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Student ID</label>
+                    <input type="text" placeholder="e.g. BC260049" />
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="e.g. yourname@upm.edu.my" />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create a password" />
+                </div>
+                <div class="form-group">
+                    <label>Role</label>
+                    <select>
+                        <option>Student (Pre-order meals)</option>
+                        <option>Vendor (Sell on CampusBite)</option>
+                        <option>Runner (Deliver on campus)</option>
+                    </select>
+                </div>
+                <button class="btn-primary btn-full" onclick="handleRegister()">Create Account</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal modal-cart">
+            <div class="modal-header">
+                <h2>🛒 Your Order</h2>
+                <button class="modal-close" onclick="closeModal('cartModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems">
+                    <div class="cart-empty">
+                        <div style="font-size:3rem;">🍽️</div>
+                        <p>Your cart is empty</p>
+                        <small>Add some delicious meals from the menu!</small>
+                    </div>
+                </div>
+                <div class="cart-summary" id="cartSummary" style="display:none;">
+                    <div class="cart-total">
+                        <span>Total (incl. RM0.50 fee)</span>
+                        <span class="total-price" id="totalPrice">RM0.00</span>
+                    </div>
+                    <button class="btn-primary btn-full" onclick="handleCheckout()">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" id="floatingCart" onclick="showCart()" style="display:none;">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
